@@ -1,4 +1,19 @@
-### Python 기술면접에서 자주 나오는 질문과 답
+## Python
+
+* ### PyPy
+
+  PyPy는 파이썬으로 만들어진 '파이썬 인터프리터'이다.
+
+  PyPy는 CPython보다 빠르다.
+
+* Python의 내부 sort: Timesort
+
+  Python의 내부 sort는 timesort 알고리즘으로 구현되어있다. merge sort와 insert sort가 병합된 형태의 안정정렬이다.
+
+
+
+
+## Python 기술면접에서 자주 나오는 질문과 답
 
 - 리스트와 튜플의 주된 차이점은 무엇인가요?
 
