@@ -22,7 +22,7 @@
 
 ## 크롤링을 위한 환경설정
 
-Python과 Beautifulsoup, Requests와 같은 관련 라이브러리 등을 설치해야함.
+Python과 Beautifulsoup, Requests와 같은 관련 라이브러리들을 설치해야함.
 
 이 모든걸 쌩으로 내 컴퓨터에 설치하게 되면 나중에 다른 작업을 할 때 버전 간 충돌이 발생하는 등의 문제가 있을 수 있다.  따라서 보통 가상환경을 구성해서 (venv, virtualenv, conda 등) 거기에 설치하는 굉장히 귀찮고 복잡한 과정을 거치게 된다. (아주 공감)
 
@@ -37,4 +37,15 @@ Python과 Beautifulsoup, Requests와 같은 관련 라이브러리 등을 설치
 [구름 IDE 주소](ide.goorm.io)
 
 
+
+<hr></hr>
+
+## 크롤링에 필요한 라이브러리 설치
+
+크롤링 작업을 하기 위해 Beautiful Soup 패키지(라이브러리)를 이용한다.
+
+- Beautiful Soup: 크롤링용 라이브러리
+- Pandas: 데이터분석용 라이브러리
+
+pip install bs4(패키지명)
 
