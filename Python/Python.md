@@ -29,6 +29,6 @@
 
 - 파이썬에서 Set은 무엇인가요?
 
-  집합 자료형
+  순서x, 중복허용x
 
 ###### 출처: https://shelling203.tistory.com/31
