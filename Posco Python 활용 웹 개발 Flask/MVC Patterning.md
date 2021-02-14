@@ -2,7 +2,7 @@
 
 Model / View / Controller 세 단계로 구성하여 Web Application을 구조화하는 방식
 
-- **Model** : Data Base와 연결, Data를 처리하는 부분   _(model 폴더)_
+- **Model** : Data Base와 연결, Data를 처리하는 부분. 즉 Data Base와 관련된 작업들을 하는 곳   _(model 폴더)_
 - **View** : HTML 화면 구성, 시각화 및 UI를 처리하는 부분   _(statics / templates 폴더)_
 - **Controller** : Model과 View를 연결 관리, Protocol 관리(Flask)   _(app.py)_
 

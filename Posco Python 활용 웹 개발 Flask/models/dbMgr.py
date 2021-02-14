@@ -1,7 +1,10 @@
-# 실제 모델링이 실시되어, 데이터가 분석되는 부분은 dbMgr.py
-# 실제 프로젝트에서는 이 곳이 추천 알고리즘이 도는 부분이여야 함.
-
-# dbMgr.py는 Controller 부분에서 요청한 '데이터 모델링'에 대한 함수가 들어가 있음.
+# 데이터베이스에 의존하는 유일한 파일
 
 # 실제 Back End에서는 서버 Data Base와 연동되어, 데이터를 실시간으로 불러오고 저장하는 기능을 함.
 
+
+import pandas as pd
+
+df =  pd.read_csv('./../1_model_data (has_movie).csv')
+
+print(df)
