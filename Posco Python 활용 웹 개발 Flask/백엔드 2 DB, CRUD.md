@@ -16,11 +16,11 @@
 
 1. **관계형 DB, RDB**(Relational Database) : 엑셀표처럼 짜여진 틀 안에서 정해진 정보만 입력하는 것
 
-   <img src="./source/관계형DB.PNG">
+   <img src="../source/관계형DB.PNG">
 
 2. **NoSQL 데이터베이스** : 메모장에 정보를 입력하는 것처럼 틀이 정해져 있지 않고 상대적으로 자유롭게 정보를 입력하는 DB
 
-   <img src="./source/NoSQL DB.PNG">
+   <img src="../source/NoSQL DB.PNG">
 
 3. 이 외에도 세부적인 구조, 만든 회사 등에 따라 정말 다양한 데이터 베이스가 있음..
 
