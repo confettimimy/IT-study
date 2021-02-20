@@ -4,7 +4,7 @@
 
 #
 
-<img src="../source/통신.PNG">
+<img src="../source/통신.PNG" width="500">
 
 **두 개의 시스템이 통신하기 위해서 그 일련의 절차들을 7단계로 나눔**
 
