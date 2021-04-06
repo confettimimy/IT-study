@@ -1,4 +1,4 @@
-## Eye Tracker Manager (캘리브레이션)
+## Eye Tracker Manager (캘리브레이션 단계)
 
 In addition to being a graphical application in which you can browse eye trackers and work with selected eye tracker, **you can also launch Eye Tracker Manager with command line arguments to directly trigger its features.** This allows you to reuse some of the features of Eye Tracker Manager instead of implementing your own version (using the Tobii Pro SDK).
 
