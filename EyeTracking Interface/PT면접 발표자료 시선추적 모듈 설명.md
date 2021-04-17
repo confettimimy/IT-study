@@ -16,9 +16,15 @@
 
 **1.**  **아이트래커 장치 검색** 
 
-find_all_eyetrackers() 함수 설명
+find_all_eyetrackers() 함수 설명 : 시선 추적기를 검색하는 함수
 
-시선 추적기를 검색하려면 find_all_eyetrackers ()를 호출하고 출력을 새 변수에 할당하면 됩니다.
+`find_all_eyetrackers ()`의 반환 값은`EyeTracker` 객체의 튜플
+
+find_all_eyetrackers () 메서드는 EyeTracker  Class에 정의돼 있다.
+
+(첫 번째) 시선 추적기의 메타 데이터에 액세스하여 다음과 같이 인쇄 할 수 있다.
+
+시선 추적기를 검색하려면 find_all_eyetrackers ()를 호출하고 출력을 새 변수에 할당하면 됨.
 
 #
 
@@ -28,28 +34,25 @@ find_all_eyetrackers() 함수 설명
 
 시선 데이터를 보다 더 정확하게 수집하기 위해 캘리브레이션을 수행  Calibration 수행
 
+tobii research라이브러리에서  캘리브레이션을 지원해주는 스니펫도 많이 있는데,
+
+본인은 토비사에서 제공하는 자체 sw를 이용하여 캘리브레이션 작업을 진행하였다.
+
 #
 
 **3.**  **시선 데이터 획득, 변환, 출력**
 
 gaze_data_callback(gaze_data) <- 콜백 함수
 
-(소스코드 …이하 모니터 좌표로 변환)
-
 얻은 시선 데이터 -> 모니터 좌표로 변환 + -> 화면에 출력까지!( SetCursor() 를 통해 마우스 포인터 맵핑)
 
-얻은 시선 데이터로 여기 콜백함수에서 원하는 작업 수행
+얻은 시선 데이터로 여기 콜백함수에서 원하는 작업 정의
 
 #
 
 **4.**  **새로운 시선 데이터가 들어올 때마다 반복 수행**
 
-= 새로운 시선 데이터가 들어올 때마다 위 정의한 콜백함수 호출됨 = 반복!
-
-subscribe_to(gaze_data_callback) 한 번 호출
-
-
- my_eyetracker.subscribe_to(tr.EYETRACKER_GAZE_DATA, gaze_data_callback, as_dictionary=True)
+= 새로운 시선 데이터가 들어올 때마다 gaze_data_callback(gaze_data) 함수가 계속 호출됨. (사용자가 직접 호출x)
 
 아이 트래커 개체의 subscribe_to 함수를 한 번만 호출하면됩니다.
 
@@ -57,9 +60,7 @@ subscribe_to(gaze_data_callback) 한 번 호출
 
 ​    
 
-새로운 시선 데이터가 들어올 때마다 gaze_data_callback(gaze_data) 함수가 호출됨. (사용자가 직접 호출x)
-
-콜백 함수는 사용자가 직접 호출 할 필요가 없다는 점만 유일하게 다른 점.
+콜백 함수는 사용자가 직접 호출 할 필요가 없다는 점만 유일하게 다른 점 / 함수가 다른 함수의 인자로 들어가게 된다는 점.
 
 ​    
 
@@ -71,7 +72,7 @@ subscribe_to(gaze_data_callback) 한 번 호출
 my_eyetracker.subscribe_to(tr.EYETRACKER_GAZE_DATA, gaze_data_callback, as_dictionary=True)
 ```
 
-첫 번째 입력 매개 변수는 SDK에 우리가 원하는 * 시선 데이터 *임을 알려주는 상수입니다. 아이 트래커에서 얻을 수있는 다른 유형의 데이터에 대한 다른 상수가 있습니다. 
+첫 번째 입력 매개 변수는 SDK에 우리가 원하는 *시선 데이터*임을 알려주는 상수입니다. 아이 트래커에서 얻을 수있는 다른 유형의 데이터에 대한 다른 상수가 있습니다. 
 
 두 번째 매개 변수는 방금 정의한 콜백 함수
 
