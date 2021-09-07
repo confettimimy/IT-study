@@ -54,6 +54,72 @@
 
 ---
 
+**음성 파일 정보** 
+\- 저장 형태: FLAC (Free Lossless Audio Codec)
+\- 채널: 모노
+\- 샘플레이트: 44100 Hz
+\- 비트레이트: 705 kb/s
+
+​    
+
+~~파일 -> 44100
+
+오디오파일마다에도 샘플링레이트 정보가 있다.
+
+= 해당 오디오 파일이  1초에 44100 오디오샘플 출력시킨다는 뜻.
+
+---
+
+How to obtain the highest sample rate possible in Raspbery Pi using a ADC?
+
+I am working in a project using Raspberry Pi 3 B where I get data from a IR sensor(Sharp GP2Y0A21YK0F) through a ADC MPC3008 and display it in real-time using PyQtgraph library.
+
+​    
+
+This kind of Sampling rate is not achievable with a general-purpose computer like Raspberry Pi, especially with `MCP3008`. The reason being the MCP series of ADC's tops out at `~2.7Mhz` SPI clock at `5V`.
+
+In order to read at `200KHz` rate, you would need a dedicated board.
+
+​    
+
+라즈베리파이와 같은 보통 컴퓨터에서는  그렇게 높은 샘플링레이트를 실현할 수 없다. 즉, 라즈베리파이에서는 일정 주파수까지만 지원해준다.(여기서는 44100)
+
+​    
+
+프로젝트에서는 16000 -> 44100으로 변경해 사용해서
+
+라즈베리파이는 여기까지 지원해주는데 그 초과를 사용해 오류가 났던 건 아닌 것 같고,
+
+사용된 스피커 장치나 오디오장치가 바뀌어서 그런것 같다.
+
+당시 터틀봇에 끼울 마이크랑 스피커를 또샀었다. 기존께 맞지않아서
+
+---
+
+
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+​     
+
+---
+
 ### 샘플링 레이트(주파수 범위)    [출처](https://cloud.google.com/solutions/media-entertainment/optimizing-audio-files-for-speech-to-text?hl=ko#sample_rate_frequency_range)
 
 **샘플링 레이트는 오디오 파일의 주파수 범위를 결정합니다. 오디오 파일을 구성하는 초당 샘플 수가 기준이 됩니다. 일반적으로 디지털 오디오 파일의 재생 가능한 최고 주파수는 샘플링 레이트의 절반과 같습니다. 예를 들어 44.1kHz 오디오 파일에서 재생할 수 있는 가장 높은 주파수는 약 22kHz**로, 일반적인 청취자의 가청 주파수 응답 범위의 최상단에 있거나 이를 넘습니다.
