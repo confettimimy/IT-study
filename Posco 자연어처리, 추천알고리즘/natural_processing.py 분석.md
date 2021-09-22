@@ -72,3 +72,10 @@ def national(movie_name):
 
 movie_natlang.csv 파일에서의 칼럼 **title**, **natlang** 두 열을 가져와 db에 넣는다.
 
+
+
+
+
+
+
+정렬 잘 알아보기
