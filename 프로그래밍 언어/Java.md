@@ -2,7 +2,7 @@
 
 ​    
 
-https://mangkyu.tistory.com/94   <-- 참고하기!
+출처: https://mangkyu.tistory.com/94   
 
 ---
 
@@ -10,10 +10,72 @@ https://mangkyu.tistory.com/94   <-- 참고하기!
 
 - 장점
   - JVM 위에서 동작하기 때문에 운영체제에 독립적이다.
-  - 가비지컬렉터가 메모리를 관리해주기 때문에 편리하다.
+  - 가비지컬렉터가 메모리를 관리해주기 때문에 편리하다. (가비지 컬렉터는 jvm 실행엔진의 한 요소!)
 - 단점
   - JVM 위에서 동작하기 때문에 실행 속도가 상대적으로 느리다.
   - 다중 상속이나 타입에 업격하는 등 제약이 있는 것이 많다.
+
+---
+
+### Java8 
+
+Java8에서는 함수형 프로그래밍을 위한 stream API와 Lambda, 함수형 인터페이스 등과 Null-safe한 작업을 위한 Optional API, Date와 Time API 등이 추가되었습니다.
+
+---
+
+### 가비지 컬렉터(Garbage Collector)란? 
+
+'더이상 참조되지 않는 메모리'인 가비지를 청소해주는 JVM의 실행 엔진의 한 요소입니다. JVM은 new와 같은 연산에 의해 새롭게 생성된 객체들 중에서 더이상 참조되지 않는 객체를 정리해줍니다. 가비지 컬렉터는 Heap 영역을 위주로 탐색하며 메모리를 정리해줍니다.
+
+---
+
+### synchornized란?
+
+Java에서 지원하는 synchronized 키워드는 **여러 쓰레드가 하나의 자원을 이용하고자 할 때, 한 스레드가 해당 자원을 사용중인 경우, 데이터에 접근할 수 없도록 막는 키워드**입니다. synchronized 키워드를 이용하면 병렬 상황에서 자원의 접근을 안전하게 하지만, 자원을 이용하지 않는 쓰레드는 락에 의한 병목현상이 발생하게 됩니다.
+
+- 메소드 synchronized: 한 시점에 하나의 쓰레드만이 해당 메소드를 실행할 수 있다.
+- 변수 synchronized: 한시점에 하나의 쓰레드만이 해당 변수를 참조할 수 있다.
+
+---
+
+### Java의 List, Set, Map 차이 
+
+- List
+  - 데이터를 순차적으로 저장한다.
+  - 데이터의 중복을 허용한다. 
+  - 데이터로 null을 허용한다.
+- Set
+  - 순서없이 Key로만 데이터를 저장한다.
+  - Key의 중복을 허용하지 않는다.
+  - Key로 null을 허용하지 않는다.
+- Map
+  - 순서없이 Key, Value로 데이터를 저장한다.
+  - Value는 중복을 허용하지만 Key의 중복을 허용하지 않는다.
+  - Key로 null을 허용하지 않는다.
+
+---
+
+### Java의Vector와 ArrayList 차이
+
+- Vector
+  - 동기화를 지원한다.
+  - 속도가 느리지만 병렬 상황에서 안전하다.
+  - 크기가 증가하는 경우, 2배 증가함(10 -> 20)
+- ArrayList
+  - 동기화를 지원하지 않는다.
+  - 속도는 빠르지만 병렬 상황에서 안전하지 않다.
+  - 크기가 증가하는 경우, 1.5배 증가함(10 -> 15)
+
+---
+
+### Java의 StringBuffer와 StringBuilder 차이 
+
+- StringBuffer
+  - 동기화를 지원한다.
+  - 속도가 느리지만 병렬 상황에서 안전하다.
+- StringBuilder
+  - 동기화를 지원하지 않는다.
+  - 속도는 빠르지만 병렬 상황에서 안전하지 않다.
 
 ---
 
@@ -25,17 +87,17 @@ https://mangkyu.tistory.com/94   <-- 참고하기!
 
 ---
 
-- 오버로딩과 오버라이딩의 차이
+### 오버로딩과 오버라이딩의 차이
 
-  오버로딩: 메소드의 이름은 같게 하되, 매개변수의 개수나 타입은 다르게 하는 것
+오버로딩: 메소드의 이름은 같게 하되, 매개변수의 개수나 타입은 다르게 하는 것
 
-  오버라이딩: 부모 클래스로부터 상속받아 자식 클래스를 재정의하는 것
+오버라이딩: 부모 클래스로부터 상속받아 자식 클래스를 재정의하는 것
 
-  
+---
 
-- 자바에서 Thread 구현 방법
+### 자바에서 Thread 구현 방법
 
-  Runnable 인터페이스를 구현하거나 Thread 클래스를 상속받아 run() 메소드를 오버라이딩한다.
+Runnable 인터페이스를 구현하거나 Thread 클래스를 상속받아 run() 메소드를 오버라이딩한다.
 
 ---
 
@@ -76,3 +138,6 @@ JDK is an acronym for Java Development Kit. It is a software development environ
 - Standard Edition Java Platform
 - Enterprise Edition Java Platform
 - Micro Edition Java Platform
+
+---
+
